@@ -76,7 +76,7 @@ yesBtn.addEventListener("click", () => {
 
   celebration.classList.remove("hidden");
   finalText.innerText =
-    "YAYYY 🎉 You just made my day, my month, and probably my year ❤️";
+    "Mich a tuza Valentine ani mich Rahnar DW ❤️";
 
   // 🎆 Confetti burst (mobile-friendly)
   confetti({
