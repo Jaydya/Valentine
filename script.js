@@ -36,12 +36,12 @@ const celebration = document.getElementById("celebration");
 const finalText = document.getElementById("finalText");
 
 // Initial question
-question.innerText = `Hey ${names[nameIndex]}, will you be my Valentine? 😏`;
+question.innerText = `${names[nameIndex]}, will you be my Valentine? 😏`;
 
 // Rotate name every 2 seconds
 setInterval(() => {
   nameIndex = (nameIndex + 1) % names.length;
-  question.innerText = `Hey ${names[nameIndex]}, will you be my Valentine? 😏`;
+  question.innerText = `${names[nameIndex]}, will you be my Valentine? 😏`;
 }, 2000);
 
 // NO button runs away + text change
