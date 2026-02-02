@@ -55,7 +55,7 @@ button {
 }
 
 #celebration img {
-  width: 220px;
-  margin-top: 20px;
-  border-radius: 12px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 14px;
 }
