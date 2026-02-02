@@ -1,9 +1,9 @@
 // 1️⃣ Names (nicknames rotate)
 const names = [
-  "Ananya ❤️",
-  "Cutie 😏",
-  "Miss Trouble 😈",
-  "My Favorite Human 🫶"
+  "Gauuu ❤️",
+  "Babu 🫶",
+  "Gauriiii 💕",
+  "Dhungan 😘"
 ];
 
 let nameIndex = 0;
@@ -11,14 +11,23 @@ let nameIndex = 0;
 // 2️⃣ No-button texts
 const noTexts = [
   "No 🙃",
-  "No way 😏",
-  "Not at all 😤",
-  "Still no? 😳",
-  "You are testing me 😑"
+  "Ladat nako yeu 😏",
+  "Gap yes dab 😤",
+  "Dhungan 😳",
+  "Bas ata 😑"
 ];
 
 let noIndex = 0;
+// 📸 Slideshow photos
+const photos = [
+  "assets/her1.jpeg",
+  "assets/her2.jpeg",
+  "assets/her3.jpeg",
+  "assets/her4.jpg",
+  "assets/her5.jpeg"
+];
 
+let photoIndex = 0;
 // Elements
 const question = document.getElementById("question");
 const noBtn = document.getElementById("noBtn");
@@ -50,7 +59,15 @@ noBtn.addEventListener("mouseover", moveNoButton);
 
 // Mobile
 noBtn.addEventListener("touchstart", moveNoButton);
+// ▶️ Start slideshow after YES
+function startSlideshow() {
+  const img = document.getElementById("slideshow");
 
+  setInterval(() => {
+    photoIndex = (photoIndex + 1) % photos.length;
+    img.src = photos[photoIndex];
+  }, 2500);
+}
 // YES button celebration
 yesBtn.addEventListener("click", () => {
   question.style.display = "none";
@@ -66,6 +83,10 @@ yesBtn.addEventListener("click", () => {
     spread: 90,
     origin: { y: 0.6 }
   });
+
+  // ▶️ START SLIDESHOW
+  startSlideshow();
+});
 
   // Extra bursts (feels like crackers)
   setTimeout(() => {
