@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 // 1️⃣ Names (nicknames rotate)
 const names = [
   "Gauuu ❤️",
@@ -61,6 +62,7 @@ noBtn.addEventListener("touchstart", moveNoButton);
 // ▶️ Start slideshow after YES
 function startSlideshow() {
   const img = document.getElementById("slideshow");
+  if (!img) return;
 
   setInterval(() => {
     photoIndex = (photoIndex + 1) % photos.length;
