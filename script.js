@@ -23,7 +23,6 @@ const photos = [
   "assets/her1.jpeg",
   "assets/her2.jpeg",
   "assets/her3.jpeg",
-  "assets/her4.jpg",
   "assets/her5.jpeg"
 ];
 
